@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation(
+            'com.codeborne:selenide:6.9.0',
+            'org.junit.jupiter:junit-jupiter:5.9.0',
+            'org.slf4j:slf4j-simple:2.0.3'
+    )
+}
+
+test {
+    useJUnitPlatform()
+}
+
+compileTestJava{
+    options.encoding = 'UTF-8'
+}
